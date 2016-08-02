@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Global</title>
+    <script type="text/javascript">
+      myscope="Global";
+      /*(function () {
+        alert("inside function "+myscope);
+      })();*/
+        alert("outside function "+window.myscope);
+    </script>
+  </head>
+  <body>
+    <h1>Global</h1>
+  </body>
+</html>
