@@ -1,0 +1,25 @@
+<script>
+var emp=
+[{'name':'Saurabh','age':30,'occupation':"Team Leader"},
+{'name':'Anupriya','age':32,'occupation':"Team Leader"},
+{'name':'Kalyani','age':25,'occupation':"Programmer"},
+{'name':'Damodaran','age':27,'occupation':"Programmer"},
+{'name':'Krishnakath','age':22,'occupation':"Programmer"},
+{'name':'Venketraman','age':28,'occupation':"Programmer"}];
+
+var age=[];
+var age1=[];
+for(ob in emp)
+{
+  age[ob]=emp[ob].age;
+  age1[ob]=emp[ob].age;
+}
+
+age1.sort();
+
+for(var i=emp.length-1;i>=0;i--)
+{
+  var ind=age.indexOf(age1[i]);
+  document.write(emp[ind].age+"<br />");
+}
+</script>

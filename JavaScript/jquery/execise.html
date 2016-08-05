@@ -1,0 +1,42 @@
+<script>
+var emp=
+[{'name':'Saurabh','age':30,'occupation':"Team Leader"},
+{'name':'Anupriya','age':32,'occupation':"Team Leader"},
+{'name':'Kalyani','age':25,'occupation':"Programmer"},
+{'name':'Damodaran','age':27,'occupation':"Programmer"},
+{'name':'Krishnakath','age':22,'occupation':"Programmer"},
+{'name':'Venketraman','age':28,'occupation':"Programmer"}];
+
+var i,j=0;
+var occ=[];
+occ[j]=emp[0].occupation;
+for(i=1;i<emp.length;i++)
+{
+  for(j=0;j<occ.length;j++)
+  {
+    if(emp[i].occupation==occ[j])
+    {
+      break;
+    }
+  }
+  if(j==occ.length)
+  {
+    occ[occ.length]=emp[i].occupation;
+  }
+}
+var newObj=new Object();
+for(i=0;i<occ.length;i++)
+{
+  var arr=[];
+  for(j=0;j<emp.length;j++)
+  {
+    if(occ[i]==emp[j].occupation)
+    {
+      arr.push({name:emp[j].name,age:emp[j].age});
+
+    }
+  }
+  newObj[occ[i]]=arr;
+}
+console.log(newObj);
+</script>
